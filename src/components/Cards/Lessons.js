@@ -1,13 +1,15 @@
 import React from "react";
 import { Component } from "react";
-import Card from "./CardUI";
+
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
+
 import "swiper/css/scrollbar";
 import LessonsDB from "../../db/lessons.json";
+
+import ReactPlayer from "react-player";
 
 class Lessons extends Component {
   render() {
@@ -32,7 +34,7 @@ class Lessons extends Component {
             },
             768: {
               // width: 768,
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -41,19 +43,23 @@ class Lessons extends Component {
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          <div className="container">
-            {LessonsDB.map((lesson) => (
-              <SwiperSlide key={lesson.id}>
-                <div className="row">
-                  <Card
-                    imgsrc={lesson.YoutubeURL}
-                    Name={lesson.Title}
-                    text={lesson.Author}
-                  />
+          {LessonsDB.map((lesson) => (
+            <SwiperSlide key={lesson.id}>
+              <div>
+                <div className="card text-center">
+                  <div className="overflow">
+                    <ReactPlayer url={lesson.YoutubeURL} />
+                  </div>
+                  <div className="card-body text-dark">
+                    <h4 className="card-title">{lesson.Title}</h4>
+                    <p className="card-text text-secondary">
+                      <small>{lesson.Author}</small>
+                    </p>
+                  </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </div>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     );
