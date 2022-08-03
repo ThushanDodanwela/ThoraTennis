@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { useRef, UseEffect, useState } from "react";
+import { useRef, useState } from "react";
 import images from "./images";
 import "./Gallery.css";
 

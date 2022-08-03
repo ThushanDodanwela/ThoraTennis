@@ -7,34 +7,54 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import LessonsDB from "../../db/lessons.json";
 
 class Lessons extends Component {
   render() {
     return (
       <div id="NEWS" style={{ marginTop: "5%" }}>
-        <h1 style={{ textAlign: "center", fontWeight: "500" }}>
+        <h1
+          style={{ textAlign: "center", fontWeight: "500", marginBottom: "5%" }}
+        >
           {" "}
           Latest Videos{" "}
         </h1>
 
-        {/* <Swiper
+        <Swiper
           // install Swiper modules
+          breakpoints={{
+            480: {
+              slidesPerView: 1,
+            },
+            576: {
+              // width: 576,
+              slidesPerView: 2,
+            },
+            768: {
+              // width: 768,
+              slidesPerView: 4,
+            },
+          }}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
-          slidesPerView={4}
+          spaceBetween={10}
           navigation
-          pagination={{ clickable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
-          <div className="container-fluid d-flex justify-content-center">
-            {LessonsDB.map((lesson) => {
-              <SwiperSlide>
-                <Card imgsrc={lesson.imgsrc} Name="Daniel" key={lesson.id} />
-              </SwiperSlide>;
-            })}
+          <div className="container">
+            {LessonsDB.map((lesson) => (
+              <SwiperSlide key={lesson.id}>
+                <div className="row">
+                  <Card
+                    imgsrc={lesson.YoutubeURL}
+                    Name={lesson.Title}
+                    text={lesson.Author}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
           </div>
-        </Swiper> */}
+        </Swiper>
       </div>
     );
   }

@@ -14,7 +14,7 @@ function CardUI(props) {
           <h4 className="card-title">{props.Name}</h4>
           <p className="card-text text-secondary">{props.text}</p>
           <Button href="" variant="outline-success" className="ms-auto">
-            Learn More
+            {props.btn}
           </Button>
         </div>
       </div>

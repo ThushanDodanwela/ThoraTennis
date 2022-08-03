@@ -8,6 +8,8 @@ import About from "./components/About/About";
 import Gallery from "./components/Gallery/Gallery";
 import Coach from "./components/Coach/Coach";
 import News from "./components/Cards/News";
+import Lessons from "./components/Cards/Lessons";
+import Footer from "./components/Footer/Footer";
 
 const App = () => (
   <div>
@@ -16,8 +18,10 @@ const App = () => (
     <About />
     <Gallery />
     <News />
+    <Lessons />
 
     <Coach />
+    <Footer />
   </div>
 );
 
