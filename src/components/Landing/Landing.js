@@ -1,49 +1,33 @@
 import React from "react";
 import "./Landing.css";
-import Carousel from "react-bootstrap/Carousel";
+import { motion } from "framer-motion";
 
 function Landing() {
   return (
-    <Carousel>
-      <Carousel.Item>
-        <h1>Hello</h1>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=First slide&bg=373940"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
-          alt="Second slide"
-        />
+    <header className="masthead" id="HOME">
+      <div className="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div className="d-flex justify-content-center">
+          <div className="text-center">
+            <motion.h1
+              animate={{ x: 25 }}
+              className="mx-auto my-0 text-uppercase"
+            >
+              Tennis
+            </motion.h1>
+            <h2
+              className="text-white-50 mx-auto mt-2 mb-5"
+              style={{ lineSpacing: "14px" }}
+            >
+              Sport for Healthy Lifetime.
+            </h2>
 
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+            <a className="btn btn-primary" href="#ABOUT">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }
 
