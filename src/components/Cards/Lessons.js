@@ -1,9 +1,12 @@
 import React from "react";
 import { Component } from "react";
 import Card from "./CardUI";
-import Daniel from "../../assets/Daniel.jpg";
-import Alex from "../../assets/Alex.jpg";
-import Nadal from "../../assets/Nadal.jpg";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 class Lessons extends Component {
   render() {
@@ -13,27 +16,25 @@ class Lessons extends Component {
           {" "}
           Latest Videos{" "}
         </h1>
-        <div className="container-fluid d-flex justify-content-center">
-          <div className="row">
-            <div className="col-md-3">
-              <Card imgsrc={Daniel} Name="Daniel" />
-            </div>
-            <div className="col-md-3">
-              <Card imgsrc={Alex} Name="Alex" />
-            </div>
-            <div className="col-md-3">
-              <Card imgsrc={Nadal} Name="Nadal" />
-            </div>
 
-            <div className="col-md-3">
-              <Card imgsrc={Nadal} Name="Nadal" />
-            </div>
-
-            <div className="col-md-3">
-              <Card imgsrc={Nadal} Name="Nadal" />
-            </div>
+        {/* <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={4}
+          navigation
+          pagination={{ clickable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          <div className="container-fluid d-flex justify-content-center">
+            {LessonsDB.map((lesson) => {
+              <SwiperSlide>
+                <Card imgsrc={lesson.imgsrc} Name="Daniel" key={lesson.id} />
+              </SwiperSlide>;
+            })}
           </div>
-        </div>
+        </Swiper> */}
       </div>
     );
   }

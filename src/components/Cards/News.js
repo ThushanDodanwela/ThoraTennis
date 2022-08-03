@@ -1,9 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import Card from "./CardUI";
-import Daniel from "../../assets/Daniel.jpg";
-import Alex from "../../assets/Alex.jpg";
-import Nadal from "../../assets/Nadal.jpg";
+import NewsDB from "../../db/news.json";
 
 class News extends Component {
   render() {
@@ -14,21 +12,19 @@ class News extends Component {
           This Week in Tennis{" "}
         </h1>
         <div className="container-fluid d-flex justify-content-center">
-          <div className="row">
-            <div className="col-md-3">
-              <Card imgsrc={Daniel} Name="Daniel" />
+          {NewsDB.map((news) => (
+            <div className="row">
+              <div className="col-md-3">
+                <Card
+                  imgsrc={news.ImageURL}
+                  Name={news.Title}
+                  text={news.Content}
+                  key={news.id}
+                />
+              </div>
             </div>
-            <div className="col-md-3">
-              <Card imgsrc={Alex} Name="Alex" />
-            </div>
-            <div className="col-md-3">
-              <Card imgsrc={Nadal} Name="Nadal" />
-            </div>
-
-            <div className="col-md-3">
-              <Card imgsrc={Nadal} Name="Nadal" />
-            </div>
-          </div>
+          ))}
+          ;
         </div>
       </div>
     );

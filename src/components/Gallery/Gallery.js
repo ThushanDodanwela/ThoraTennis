@@ -26,7 +26,7 @@ function Gallery() {
             dragConstraints={{ right: 0, left: -width }}
             className="inner-carousel"
           >
-            {images.map((image) => {
+            {images.map((image, i) => {
               return (
                 <motion.div className="item">
                   <img src={image} alt="" />

@@ -8,7 +8,6 @@ import About from "./components/About/About";
 import Gallery from "./components/Gallery/Gallery";
 import Coach from "./components/Coach/Coach";
 import News from "./components/Cards/News";
-import Lessons from "./components/Cards/Lessons";
 
 const App = () => (
   <div>
@@ -16,7 +15,6 @@ const App = () => (
     <Landing />
     <About />
     <Gallery />
-    <Lessons />
     <News />
 
     <Coach />
