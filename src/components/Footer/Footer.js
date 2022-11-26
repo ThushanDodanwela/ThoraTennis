@@ -15,7 +15,11 @@ function Footer() {
                 <img src={logo} height="90" alt="" loading="logo" />
               </div>
 
-              <p className="text-center"></p>
+              <p className="text-center">
+                {" "}
+                <strong>Thora Tennis</strong> <br />
+                It's not just a name.It's the Brand🎾🎾🎾
+              </p>
               <ul class="list-unstyled d-flex flex-row justify-content-center">
                 <li>
                   <a
@@ -121,18 +125,21 @@ function Footer() {
               <ul class="list-unstyled">
                 <li>
                   <p>
-                    <i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57 Street,
-                    Poland
+                    <i class="fas fa-map-marker-alt pe-2"></i>Thora Tennis
+                    Academy Matale,
+                    <br /> Matale,
+                    <br /> Sri Lanka
                   </p>
                 </li>
                 <li>
                   <p>
-                    <i class="fas fa-phone pe-2"></i>+ 01 234 567 89
+                    <i class="fas fa-phone pe-2"></i>+ 94 71 832 1721
                   </p>
                 </li>
                 <li>
                   <p>
-                    <i class="fas fa-envelope pe-2 mb-0"></i>contact@example.com
+                    <i class="fas fa-envelope pe-2 mb-0"></i>
+                    thoratennisofficial@gmail.com
                   </p>
                 </li>
               </ul>
@@ -144,8 +151,8 @@ function Footer() {
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
         >
           © 2022 Copyright:
-          <a className="text-white" href="https://mdbootstrap.com/">
-            MDBootstrap.com
+          <a className="text-white" href="https://thoratennis.com/">
+            thoratennis.com
           </a>
         </div>
       </footer>

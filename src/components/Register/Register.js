@@ -5,7 +5,7 @@ import LogoIcon from "../../assets/LogoTennis.png";
 import { Link } from "react-router-dom";
 import Home from "../Home/Home";
 
-const Login = () => {
+const Register = () => {
   const { useState } = React;
 
   const [inputs, setinputs] = useState({
@@ -140,4 +140,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

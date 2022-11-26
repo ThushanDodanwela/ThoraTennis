@@ -29,11 +29,11 @@ class Lessons extends Component {
               slidesPerView: 1,
             },
             576: {
-              // width: 576,
+              //width: 576,
               slidesPerView: 2,
             },
             768: {
-              // width: 768,
+              //width: 768,
               slidesPerView: 3,
             },
           }}
@@ -42,13 +42,14 @@ class Lessons extends Component {
           navigation
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
+          className="ps-5"
         >
           {LessonsDB.map((lesson) => (
             <SwiperSlide key={lesson.id}>
               <div>
                 <div className="card text-center">
-                  <div className="overflow">
-                    <ReactPlayer url={lesson.YoutubeURL} />
+                  <div className="">
+                    <ReactPlayer url={lesson.YoutubeURL} className="w-100" />
                   </div>
                   <div className="card-body text-dark">
                     <h4 className="card-title">{lesson.Title}</h4>
