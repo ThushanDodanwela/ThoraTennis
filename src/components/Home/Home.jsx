@@ -8,6 +8,7 @@ import Lessons from "../../components/Cards/Lessons";
 import Footer from "../../components/Footer/Footer";
 
 import React from "react";
+import WTP from "../Cards/WTP";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <About />
       <Gallery />
       <News />
+      <WTP />
       <Lessons />
       <Coach />
       <Footer />

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Component } from "react";
 import Card from "./CardUI";
 import NewsDB from "../../db/news.json";
+import axios from "axios";
 
-class News extends Component {
-  render() {
-    return (
+export default function News() {
+  return (
+    <div>
       <div id="NEWS" style={{ marginTop: "5%" }}>
         <h1 style={{ textAlign: "center", fontWeight: "600" }}>
           {" "}
@@ -27,8 +28,6 @@ class News extends Component {
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-export default News;

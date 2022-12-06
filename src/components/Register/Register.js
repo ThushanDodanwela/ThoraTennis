@@ -1,9 +1,9 @@
 import React from "react";
 import aboutImg from "../../assets/ball.jpg";
-import "./Login.css";
+import "./Register.css";
 import LogoIcon from "../../assets/LogoTennis.png";
 import { Link } from "react-router-dom";
-import Home from "../Home/Home";
+import { Col, Row } from "react-bootstrap";
 
 const Register = () => {
   const { useState } = React;
@@ -81,52 +81,170 @@ const Register = () => {
                 />
               </span>
               <div className="hello">
-                <h1>Login!</h1>
-                <h5 style={{ fontWeight: "300", fontSize: "12px" }}>
-                  Let the Racket do the Talking{" "}
+                <h1>Register!</h1>
+                <h5
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "12px",
+                    color: "#329902",
+                  }}
+                >
+                  Signup with THORA{" "}
                 </h5>
               </div>
 
               <form onSubmit={submitForm}>
-                <div className="input_text">
-                  <input
-                    className={` ${warnemail ? "warning" : ""}`}
-                    type="text"
-                    placeholder="Enter Email"
-                    name="email"
-                    value={inputs.email}
-                    onChange={inputEvent}
-                  />
-                  <p className={` ${danger ? "danger" : ""}`}>
-                    <i className="fa fa-warning"></i>Please enter a valid email
-                    address.
-                  </p>
-                </div>
-                <div className="input_text">
-                  <input
-                    className={` ${warnpass ? "warning" : ""}`}
-                    type={pass}
-                    placeholder="Enter Password"
-                    name="password"
-                    value={inputs.password}
-                    onChange={inputEvent}
-                  />
-                  <i
-                    onClick={Eye}
-                    className={`fa ${eye ? "fa-eye-slash" : "fa-eye"}`}
-                  ></i>
-                </div>
-                <div className="recovery">
-                  <p>Forgot Password?</p>
-                </div>
+                <Row>
+                  <Col>
+                    <div className="input_text">
+                      <input
+                        className={` ${warnemail ? "warning" : ""}`}
+                        type="text"
+                        placeholder="First Name"
+                        name="fname"
+                        value={inputs.fname}
+                        onChange={inputEvent}
+                      />
+                      <p className={` ${danger ? "danger" : ""}`}>
+                        <i className="fa fa-warning"></i>Please enter a valid
+                        name.
+                      </p>
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className="input_text">
+                      <input
+                        className={` ${warnemail ? "warning" : ""}`}
+                        type="text"
+                        placeholder="Last Name"
+                        name="lname"
+                        value={inputs.lname}
+                        onChange={inputEvent}
+                      />
+                      <p className={` ${danger ? "danger" : ""}`}>
+                        <i className="fa fa-warning"></i>Please enter a valid
+                        name.
+                      </p>
+                    </div>
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col>
+                    <div className="input_text">
+                      <input
+                        className={` ${warnemail ? "warning" : ""}`}
+                        type="date"
+                        placeholder="DOB"
+                        name="dob"
+                        value={inputs.dob}
+                        onChange={inputEvent}
+                      />
+                      <p className={` ${danger ? "danger" : ""}`}>
+                        <i className="fa fa-warning"></i>You should be at least
+                        5 Years old.
+                      </p>
+                    </div>
+                  </Col>
+
+                  <Col>
+                    <div className="input_text">
+                      <input
+                        className={` ${warnemail ? "warning" : ""}`}
+                        type="text"
+                        placeholder="NIC"
+                        name="nic"
+                        value={inputs.nic}
+                        onChange={inputEvent}
+                      />
+                      <p className={` ${danger ? "danger" : ""}`}>
+                        <i className="fa fa-warning"></i>Invalid NIC
+                      </p>
+                    </div>
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col>
+                    <div className="input_text">
+                      <label class="radio-inline">
+                        <input
+                          type="radio"
+                          name="male"
+                          value={inputs.gender}
+                          onChange={inputEvent}
+                        />
+                        Male
+                        <input
+                          type="radio"
+                          name="female"
+                          value={inputs.gender}
+                          onChange={inputEvent}
+                        />
+                        Female
+                      </label>
+                    </div>
+                  </Col>
+
+                  <Col>
+                    <div className="input_text">
+                      <input
+                        className={` ${warnemail ? "warning" : ""}`}
+                        type="text"
+                        placeholder="Mobile No."
+                        name="mobile"
+                        value={inputs.mobile}
+                        onChange={inputEvent}
+                      />
+                      <p className={` ${danger ? "danger" : ""}`}>
+                        <i className="fa fa-warning"></i>Invalid Mobile No.
+                      </p>
+                    </div>
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col>
+                    <div className="input_text">
+                      <input
+                        className={` ${warnemail ? "warning" : ""}`}
+                        type="text"
+                        placeholder="Address"
+                        name="address"
+                        value={inputs.address}
+                        onChange={inputEvent}
+                      />
+                      <p className={` ${danger ? "danger" : ""}`}>
+                        <i className="fa fa-warning"></i>
+                      </p>
+                    </div>
+                  </Col>
+
+                  <Col>
+                    <div className="input_text">
+                      <input
+                        className={` ${warnemail ? "warning" : ""}`}
+                        type="email"
+                        placeholder="Email Address"
+                        name="email"
+                        value={inputs.email}
+                        onChange={inputEvent}
+                      />
+                      <p className={` ${danger ? "danger" : ""}`}>
+                        <i className="fa fa-warning"></i>Invalid Email Address
+                      </p>
+                    </div>
+                  </Col>
+                </Row>
+
                 <div className="btn-signin">
                   <Link to="/">
-                    <button type="submit">Sign in</button>
+                    <button type="submit">Register</button>
                   </Link>
                 </div>
                 <div className="register">
                   <p>
-                    Dont't have an account? <a href="/reg">Register Now</a>
+                    Already have an account? <a href="/login">Sign In</a>
                   </p>
                 </div>
               </form>
